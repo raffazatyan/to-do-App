@@ -1,13 +1,12 @@
-import 'package:application/bottom_navigation_bar.dart';
+import 'package:application/bottom_navigation_widgets/bottom_navigation_bar.dart';
 import 'package:application/provider_models/list_model.dart';
 import 'package:application/widgets/welcome_app/welcome_model.dart';
 import 'package:flutter/material.dart';
-// import 'package:lastproject/widgets/welcome_app/welcome_model.dart';
+
 import 'package:provider/provider.dart';
 
 class WelcomeFirstScreen extends StatelessWidget {
   const WelcomeFirstScreen({super.key});
-  // Функция для предварительной загрузки изображений
 
   @override
   Widget build(BuildContext context) {

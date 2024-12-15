@@ -1,7 +1,7 @@
 import 'package:application/provider_models/list_model.dart';
 import 'package:application/widgets/app_styles/colors.dart';
 import 'package:application/widgets/app_styles/app_styles.dart';
-import 'package:application/widgets/first_screen_widgets/first_screen_widgets/buttons_and_text_widgets/image_widget.dart';
+import 'package:application/widgets/first_screen_widgets/first_screen_widgets/buttons_and_text_widgets/textMain_and_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';

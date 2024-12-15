@@ -1,6 +1,5 @@
 import 'package:application/widgets/welcome_app/welcome_model.dart';
 import 'package:flutter/material.dart';
-// import 'package:lastproject/widgets/welcome_app/welcome_model.dart';
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});

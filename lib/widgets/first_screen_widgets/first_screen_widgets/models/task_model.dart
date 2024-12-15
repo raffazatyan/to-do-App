@@ -24,7 +24,6 @@ class TaskModel with ChangeNotifier {
     String? id,
   }) : id = id ?? const Uuid().v4();
 
-  // Преобразование в JSON
   String toJson() {
     return json.encode({
       'id': id,
@@ -40,7 +39,7 @@ class TaskModel with ChangeNotifier {
 
   static TaskModel fromJson(String jsonString) {
     try {
-      final jsonData = json.decode(jsonString); // Декодируем строку в Map
+      final jsonData = json.decode(jsonString);
 
       return TaskModel(
         id: jsonData['id'],
@@ -53,8 +52,7 @@ class TaskModel with ChangeNotifier {
         categoryMeetings: jsonData['categoryMeetings'],
       );
     } catch (e) {
-      print("Ошибка при парсинге JSON: $e");
-      rethrow; // Перебрасываем ошибку дальше, если нужно
+      rethrow;
     }
   }
 

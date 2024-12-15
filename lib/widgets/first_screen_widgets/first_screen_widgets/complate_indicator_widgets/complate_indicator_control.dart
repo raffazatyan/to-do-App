@@ -5,8 +5,8 @@ import 'package:application/widgets/first_screen_widgets/first_screen_widgets/co
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ComplateIndicator extends StatelessWidget {
-  const ComplateIndicator({super.key});
+class ComplateIndicatorControl extends StatelessWidget {
+  const ComplateIndicatorControl({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +30,7 @@ class ComplateIndicator extends StatelessWidget {
           SizedBox(
             height: rh(context) * 4,
           ),
-
           const UnderIndicatorTextWidget(),
-          // ProcentWidget(),
-
-          //LineIndicator Widget.
         ],
       ),
     );

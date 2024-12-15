@@ -40,46 +40,39 @@ class _TwoRowWidgetsState extends State<SegmentedTabWidgets>
   @override
   Widget build(BuildContext context) {
     final segmentedProvider = Provider.of<ListModel>(context, listen: false);
-    return Padding(
-      padding: const EdgeInsets.only(
-          // left: 16,
-          // top: 16,
-          // right: 16,
+    return SizedBox(
+      height: rh(context) * 35,
+      width: rw(context) * 326,
+      child: Builder(builder: (context) {
+        _tabController.index = segmentedProvider.button - 1;
+        return SegmentedTabControl(
+          controller: _tabController,
+          textStyle: getStyle(
+              context: context, fontSize: 14, fontWeight: FontWeight.w500),
+          indicatorPadding: const EdgeInsets.all(2),
+          tabTextColor: AppColors.colorBlackOpacity04,
+          indicatorDecoration: BoxDecoration(
+            color: const Color.fromRGBO(242, 170, 145, 1),
+            borderRadius: BorderRadius.circular(16),
           ),
-      child: SizedBox(
-        height: rh(context) * 35,
-        width: rw(context) * 326,
-        child: Builder(builder: (context) {
-          _tabController.index = segmentedProvider.button - 1;
-          return SegmentedTabControl(
-            controller: _tabController,
-            textStyle: getStyle(
-                context: context, fontSize: 14, fontWeight: FontWeight.w500),
-            indicatorPadding: const EdgeInsets.all(2),
-            tabTextColor: AppColors.colorBlackOpacity04,
-            indicatorDecoration: BoxDecoration(
-              color: const Color.fromRGBO(242, 170, 145, 1),
-              borderRadius: BorderRadius.circular(16),
+          barDecoration: BoxDecoration(
+            color: AppColors.colorBackgroundCloseButton008,
+            borderRadius: BorderRadius.circular(16),
+          ),
+          tabs: const [
+            SegmentTab(
+              label: "Work",
             ),
-            barDecoration: BoxDecoration(
-              color: AppColors.colorBackgroundCloseButton008,
-              borderRadius: BorderRadius.circular(16),
+            SegmentTab(
+              label: "Meetings",
             ),
-            tabs: const [
-              SegmentTab(
-                label: "Work",
-              ),
-              SegmentTab(
-                label: "Meetings",
-              ),
-              SegmentTab(
-                label: "Home",
-              ),
-            ],
-            selectedTabTextColor: AppColors.colorWhite,
-          );
-        }),
-      ),
+            SegmentTab(
+              label: "Home",
+            ),
+          ],
+          selectedTabTextColor: AppColors.colorWhite,
+        );
+      }),
     );
   }
 }

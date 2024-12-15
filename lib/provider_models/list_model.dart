@@ -11,9 +11,9 @@ class ListModel with ChangeNotifier {
     return _tasks;
   }
 
-  List<TaskModel> get getList {
-    return _tasks;
-  }
+  // List<TaskModel> get getList {
+  //   return _tasks;
+  // }
 
   double get completionPercentage {
     int completedTasks = filteredTasks.where((task) => task.isComplate).length;
@@ -117,7 +117,6 @@ class ListModel with ChangeNotifier {
 
     if (tasksJson != null) {
       try {
-        // Преобразуем каждую строку в TaskModel
         _tasks =
             tasksJson.map((taskJson) => TaskModel.fromJson(taskJson)).toList();
         notifyListeners();
@@ -127,21 +126,17 @@ class ListModel with ChangeNotifier {
     }
   }
 
-  // Сохранение задач в SharedPreferences
   Future<void> saveTasks() async {
     final prefs = await SharedPreferences.getInstance();
-    List<String> taskList = _tasks
-        .map((task) => task.toJson())
-        .toList(); // Преобразуем задачи в строки JSON
-    await prefs.setStringList('tasks', taskList); // Сохраняем список строк
+    List<String> taskList = _tasks.map((task) => task.toJson()).toList();
+    await prefs.setStringList('tasks', taskList);
   }
 
-  // Переключение состояния задачи (выполнена или нет)
   void toggleTaskComplaction(TaskModel task) {
     final originalIndex = _tasks.indexOf(task);
     if (originalIndex != -1) {
       _tasks[originalIndex].toggleComplation();
-      saveTasks(); // Сохраняем задачи после изменения
+      saveTasks();
       notifyListeners();
     }
   }

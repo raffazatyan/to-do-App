@@ -1,4 +1,5 @@
 import 'package:application/widgets/app_styles/app_styles.dart';
+import 'package:application/widgets/app_styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -65,10 +66,10 @@ class WelcomeSecondScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(200 * rw(context), 56 * rh(context)),
                   maximumSize: Size(200 * rw(context), 56 * rh(context)),
-                  backgroundColor: const Color.fromRGBO(242, 170, 145, 1),
+                  backgroundColor: AppColors.colorButtonBeforePressed,
                 ).copyWith(
                   overlayColor: WidgetStateProperty.all(
-                    const Color.fromRGBO(231, 126, 35, 1),
+                    AppColors.colorButtonOnPressed,
                   ),
                 ),
                 child: Row(
@@ -78,7 +79,7 @@ class WelcomeSecondScreen extends StatelessWidget {
                       "Next",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        color: Color.fromRGBO(255, 255, 255, 1),
+                        color: AppColors.colorWhite,
                       ),
                     ),
                     SvgPicture.asset("assets/welcome_images/arrow.svg"),
@@ -110,11 +111,10 @@ class WelcomeSecondScreen extends StatelessWidget {
           text,
           textAlign: TextAlign.center,
           style: getStyle(
-            context: context,
-            fontWeight: FontWeight.w500,
-            fontSize: rh(context) * 16,
-            color: const Color.fromRGBO(41, 40, 47, 0.4),
-          ),
+              context: context,
+              fontWeight: FontWeight.w500,
+              fontSize: rh(context) * 16,
+              color: AppColors.colorBlackOpacity04),
         ),
       ],
     );

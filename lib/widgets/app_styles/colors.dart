@@ -13,4 +13,6 @@ abstract class AppColors {
   static const colorAddTaskWindowBackground = Color.fromRGBO(250, 246, 240, 1);
   static const colorSettingsGreen = Color.fromRGBO(162, 228, 146, 1);
   static const colorSettingsGreenPressed = Color.fromRGBO(88, 201, 59, 0.8);
+  static const colorButtonOnPressed = Color.fromRGBO(231, 126, 35, 1);
+  static const colorButtonBeforePressed = Color.fromRGBO(242, 170, 145, 1);
 }

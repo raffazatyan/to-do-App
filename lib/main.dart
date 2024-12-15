@@ -1,8 +1,8 @@
-import 'package:application/bottom_navigation_bar.dart';
+import 'package:application/bottom_navigation_widgets/bottom_navigation_bar.dart';
 import 'package:application/provider_models/list_model.dart';
 import 'package:application/widgets/app_styles/colors.dart';
-import 'package:application/widgets/first_screen_widgets/first_screen.dart';
-import 'package:application/widgets/settings_page_widgets/settings_page.dart';
+import 'package:application/widgets/first_screen_widgets/first_screen_control.dart';
+import 'package:application/widgets/settings_page_widgets/settings_page_control.dart';
 import 'package:application/widgets/welcome_app/second_screen.dart';
 import 'package:application/widgets/welcome_app/first_screen.dart';
 import 'package:application/widgets/welcome_app/third_screen.dart';
@@ -48,13 +48,12 @@ class _MyAppState extends State<MyApp> {
           splashFactory: NoSplash.splashFactory,
           scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          // useMaterial3: true,
         ),
         routes: {
           '/firstScreen': (context) => const WelcomeFirstScreen(),
           '/sec': (context) => const WelcomeSecondScreen(),
           '/thrd': (context) => const ThirdScreen(),
-          '/appFirstScreen': (context) => const FirstScreen(),
+          '/appFirstScreen': (context) => const FirstScreenControl(),
           '/settings': (context) => const SettingsPage(),
           '/bottomNavigationBar': (context) => const BottomBar(),
         },

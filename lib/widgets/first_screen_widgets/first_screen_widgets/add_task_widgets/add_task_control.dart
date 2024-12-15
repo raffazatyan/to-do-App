@@ -1,14 +1,14 @@
 import 'package:application/widgets/app_styles/app_styles.dart';
 import 'package:application/widgets/app_styles/colors.dart';
 import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/date_widgets.dart';
-import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/first_row_widgets.dart';
+import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/segmented_tab.dart';
+import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/text_and_close%20_widgets.dart';
 import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/input_widget.dart';
 import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/save_button.dart';
-import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/two_row_widgets.dart';
 import 'package:flutter/material.dart';
 
-class AddTaskWindow extends StatelessWidget {
-  const AddTaskWindow({super.key});
+class AddTaskControl extends StatelessWidget {
+  const AddTaskControl({super.key});
 
   void showTaskDialog(BuildContext context) {
     showDialog(
@@ -35,7 +35,7 @@ class AddTaskWindow extends StatelessWidget {
                     SizedBox(
                       height: rh(context) * 16,
                     ),
-                    const FirstRowWidgets(),
+                    const TextAndCloseWidgets(),
                     SizedBox(
                       height: rh(context) * 20,
                     ),

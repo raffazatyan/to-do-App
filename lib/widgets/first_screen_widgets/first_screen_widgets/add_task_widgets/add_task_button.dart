@@ -1,6 +1,6 @@
 import 'package:application/widgets/app_styles/app_styles.dart';
 import 'package:application/widgets/app_styles/colors.dart';
-import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/add_task_window.dart';
+import 'package:application/widgets/first_screen_widgets/first_screen_widgets/add_task_widgets/add_task_control.dart';
 import 'package:flutter/material.dart';
 
 class AddTaskButton extends StatelessWidget {
@@ -11,7 +11,7 @@ class AddTaskButton extends StatelessWidget {
     //blue button under ListView
     return GestureDetector(
       onTap: () {
-        const AddTaskWindow().showTaskDialog(context);
+        const AddTaskControl().showTaskDialog(context);
       },
       child: Row(
         children: [

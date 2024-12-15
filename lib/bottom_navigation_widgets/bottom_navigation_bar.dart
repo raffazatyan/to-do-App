@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:application/widgets/app_styles/app_styles.dart';
 import 'package:application/widgets/app_styles/colors.dart';
-import 'package:application/widgets/first_screen_widgets/first_screen.dart';
-import 'package:application/widgets/settings_page_widgets/settings_page.dart';
+import 'package:application/widgets/first_screen_widgets/first_screen_control.dart';
+import 'package:application/widgets/settings_page_widgets/settings_page_control.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -19,7 +19,7 @@ class _BottomBarState extends State<BottomBar> {
   int curentIndex = 0;
 
   List<Widget> screens = [
-    const FirstScreen(),
+    const FirstScreenControl(),
     const SettingsPage(),
   ];
   @override
