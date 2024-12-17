@@ -25,6 +25,7 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: screens[curentIndex],
       bottomNavigationBar: Padding(
         padding: EdgeInsets.only(bottom: Platform.isAndroid ? 20 : 40),

@@ -41,7 +41,7 @@ class InputWidget extends StatelessWidget {
               ? SizedBox(
                   height: rh(context) * 16,
                   child: Text(
-                    "inputProvider.errorText,",
+                    "incorrect Task Name",
                     style: getStyle(
                         context: context,
                         fontSize: 12,
